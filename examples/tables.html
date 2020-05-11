@@ -620,16 +620,22 @@ The above copyright notice and this permission notice shall be included in all c
           console.log(typeof(result));
           console.log(result);
           for (let i = 0; i < result.length ; i++) {
-            content+='<tr><td>'+i+1+'</td>';
+            content+='<table class="table tid'+i+'" id="eid'+i+'"><tbody>';
+            content+='<tr onclick="toggleEmployeeDetails('+"'eid"+i+"'"+')"><td>'+i+'</td>';
             content+='<td>'+result[i].name+'</td>';
             content+='<td>'+result[i].age+'</td>';
             content+='<td>'+result[i].gender+'</td>';
             content+='<td>'+result[i].designation+'</td>';
             content+='</tr>';
-
+            content+='<table class="tid'+i+'"><thead><th>Stress Level</th><thead>';
+            content+='<tbody><tr><td>'+result[i].stress+'</td></tr>';
+            content+='</tbody></table>'
           }
           $('#employeedetails').append(content);    
         });
+        function toggleDistrict(eid){
+          $('.'+eid).toggle();
+        };
       });
     });
   </script>
