@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Sarthak Rout",
+        "age": "21",
+        "gender": "Male",
+        "designation": "Worker"
+    },
+    {
+        "name": "Asish Mohapatra",
+        "age": "21",
+        "gender": "Male",
+        "designation": "Worker"
+    },
+    {
+        "name": "Jiban Panda",
+        "age": "20",
+        "gender": "Male",
+        "designation": "Worker"
+    },
+    {
+        "name": "Mahes Dwivedi",
+        "age": "20",
+        "gender": "Male",
+        "designation": "Worker"
+    },
+    {
+        "name": "Binayak Behera",
+        "age": "20",
+        "gender": "Male",
+        "designation": "Worker"
+    },
+    {
+        "name": "Sudhansu Sahu",
+        "age": "21",
+        "gender": "Male",
+        "designation": "Worker"
+    }
+    
+]
