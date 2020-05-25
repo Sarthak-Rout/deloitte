@@ -497,7 +497,9 @@
           }
           $('#employeedetails').append(content);    
         });
-        function viewRow(id){
+      });
+    });
+    function viewRow(id){
           $.getJSON("employee.json", function(result){
             content = '';
             content+='<div class="modal" id="apimodal" tabindex="-1" role="dialog">';
@@ -528,8 +530,9 @@
           }
            });
         };
-      });
-    });
+        $('#apimodal').on('hidden', function () {
+          $('#apimodal').remove();
+        })
   </script>
 </body>
 
