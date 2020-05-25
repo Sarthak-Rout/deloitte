@@ -166,6 +166,25 @@
           </div>
         </div>
       </div> -->
+            <div class="modal" id="apimodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                    <div class="modal-body">
+                      <canvas id="myChart" width="400" height="400"></canvas>
+                      </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
       <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
@@ -502,27 +521,6 @@
     });
     function viewRow(id){
           $.getJSON("employee.json", function(result){
-            content = '';
-            content+='<div class="modal" id="apimodal" tabindex="-1" role="dialog">';
-              content+='<div class="modal-dialog">';
-                  content+='<div class="modal-content">';
-                    content+='<div class="modal-header">';
-                      content+='<h5 class="modal-title">Modal title</h5>';
-                      content+='<button type="button" class="close" data-dismiss="modal" aria-label="Close">';
-                        content+=' <span aria-hidden="true">&times;</span>';
-                        content+='</button>';
-                        content+='</div>';
-                    content+='<div class="modal-body">';
-                      content+='<canvas id="myChart" width="400" height="400"></canvas>';
-                      content+='</div>';
-                    content+='<div class="modal-footer">';
-                      content+='<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
-                      content+='<button type="button" class="btn btn-primary">Save changes</button>';
-                      content+='</div>';
-                      content+='</div>';
-                      content+='</div>';
-                      content+='</div>';
-
             for (let i = 0; i < result.length ; i++) {
             if(id == result[i].id){
               $('body').append(content);
