@@ -523,15 +523,12 @@
           $.getJSON("employee.json", function(result){
             for (let i = 0; i < result.length ; i++) {
             if(id == result[i].id){
-              $('body').append(content);
+              $('.modal-title').html(result[i].name);
+              $('#apimodal').modal('show');
             }
-            $('#apimodal').modal('show');
           }
            });
         };
-        $('#apimodal').on('hidden', function () {
-          $('#apimodal').remove();
-        })
   </script>
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');
