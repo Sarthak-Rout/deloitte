@@ -488,7 +488,7 @@
           console.log(typeof(result));
           console.log(result);
           for (let i = 0; i < result.length ; i++) {
-            content+='<tr><td>'+(i+1)+'</td>';
+            content+='<tr onclick="viewRow('+result[i].id+')"><td>'+result[i].id+'</td>';
             content+='<td>'+result[i].name+'</td>';
             content+='<td>'+result[i].age+'</td>';
             content+='<td>'+result[i].gender+'</td>';
@@ -497,8 +497,32 @@
           }
           $('#employeedetails').append(content);    
         });
-        function toggleDistrict(eid){
-          $('.'+eid).toggle();
+        function viewRow(id){
+          $.getJSON("employee.json", function(result){
+            for (let i = 0; i < result.length ; i++) {
+            if(id == result[i].id){
+              $('body').append('<div class="modal" id="apimodal" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>');
+            }
+          }
+           });
         };
       });
     });
