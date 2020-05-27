@@ -576,6 +576,7 @@
      const socket = io('https://cardigo.eu-gb.cf.appdomain.cloud');
       socket.on('connect', () => {
         console.log(socket.id);
+        console.log(socket.connected);
       });
   </script>
 </body>
