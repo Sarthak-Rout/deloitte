@@ -578,6 +578,9 @@
         console.log(socket.id);
         console.log(socket.connected);
       });
+      socket.on('receive_pulse', (data) => {
+      console.log(data);
+});
   </script>
 </body>
 
