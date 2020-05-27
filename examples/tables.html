@@ -577,6 +577,10 @@
       socket.on('connect', () => {
         console.log(socket.id);
         console.log(socket.connected);
+        //receive feedback
+      socket.on('receive_feedback', (data) => {
+      console.log(data);
+      });
       });
 
       //receive pulse data
@@ -584,10 +588,7 @@
       console.log(data);
       });
 
-      //receive feedback
-      socket.on('receive_feedback', (data) => {
-      console.log(data);
-      });
+      
   </script>
 </body>
 
