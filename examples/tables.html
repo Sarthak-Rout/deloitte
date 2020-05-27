@@ -571,8 +571,12 @@
 });
   </script>
   <script>
-     var socket;
-     socket = io.connect('https://cardigo.eu-gb.cf.appdomain.cloud');
+    //  var socket;
+    //  socket = io.connect('https://cardigo.eu-gb.cf.appdomain.cloud');
+     const socket = io('https://cardigo.eu-gb.cf.appdomain.cloud');
+      socket.on('connect', () => {
+        console.log(socket.id);
+      });
   </script>
 </body>
 
