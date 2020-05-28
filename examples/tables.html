@@ -538,7 +538,7 @@
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
-            label: '# of Votes',
+            label: 'Pulse Rate',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -587,6 +587,14 @@
       socket.on('receive_pulse', (data) => {
       console.log(data);
       console.log(data.tracepulse);
+      pulsedata = data.tracepulse;
+      function addData(chart, label, pulsedata) {
+        // chart.data.labels.push(label);
+        chart.data.datasets.forEach((dataset) => {
+            dataset.data.push(pulsedata);
+        });
+        chart.update();
+      }
       });
 
       
