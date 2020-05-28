@@ -595,14 +595,10 @@
       console.log(label);
       pulsedata = data.tracepulse;
       console.log(pulsedata);
-      function addData(chart, label, pulsedata) {
-        console.log("inside add chart function");
-        mychart.data.labels.push(label);
-        mychart.data.datasets.forEach((dataset) => {
-            dataset.data.push(pulsedata);
-        });
-        mychart.update();
-      }
+      console.log("inside add chart function");
+      myChart.data.labels(label);
+      myChart.data.datasets[0].data(pulsedata);
+      myChart.update();
       });
 
       
