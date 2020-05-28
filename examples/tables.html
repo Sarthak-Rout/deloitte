@@ -586,14 +586,14 @@
       //receive pulse data
       socket.on('receive_pulse', (data) => {
       console.log(data);
-      console.log(data.tracepulse);
+      console.log(data.tracepulse.length);
       pulsedata = data.tracepulse;
       function addData(chart, label, pulsedata) {
         // chart.data.labels.push(label);
-        chart.data.datasets.forEach((dataset) => {
+        mychart.data.datasets.forEach((dataset) => {
             dataset.data.push(pulsedata);
         });
-        chart.update();
+        mychart.update();
       }
       });
 
