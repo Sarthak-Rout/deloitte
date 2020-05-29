@@ -590,13 +590,13 @@
       var label = [];
       var pulsedata =[];
       for (let i= 0; i < data.tracepulse.length; i++) {
-        label.push(i);
+        label.push("'"+i+"'");
       }
       console.log(label);
       pulsedata = data.tracepulse;
       console.log(pulsedata);
       console.log("inside add chart function");
-      // myChart.data.labels(label);
+      myChart.data.labels(label);
       myChart.data.datasets[0].data(pulsedata);
       myChart.update();
       });
