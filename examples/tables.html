@@ -596,8 +596,8 @@
       pulsedata = data.tracepulse;
       console.log(pulsedata);
       console.log("inside add chart function");
-      myChart.data.labels(label);
-      myChart.data.datasets[0].data(pulsedata);
+      myChart.data.labels = label;
+      myChart.data.datasets[0].data = pulsedata;
       myChart.update();
       });
 
