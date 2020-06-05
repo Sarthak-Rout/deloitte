@@ -474,6 +474,7 @@ var stressChart = new Chart(ctx, {
         //receive feedback
       socket.on('receive_feedback', (data) => {
       console.log(data);
+      console.log(data.feedbackSent.question_3)
       });
       });
 
