@@ -529,113 +529,58 @@
           </div>
         </div>
       </div>
-      <footer class="footer">
+      <div class="content">
         <div class="container-fluid">
-          <nav class="float-left">
-            <ul>
-              <li>
-                <a href="https://www.creative-tim.com">
-                  Creative Tim
-                </a>
-              </li>
-              <li>
-                <a href="https://creative-tim.com/presentation">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="http://blog.creative-tim.com">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="https://www.creative-tim.com/license">
-                  Licenses
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div class="copyright float-right">
-            &copy;
-            <script>
-              document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Worker Table</h4>
+                  <p class="card-category"> Here is a detail list of all the workers</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class=" text-primary">
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Designation</th>
+                      </thead>
+                      <tbody id="employeedetails">
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" id="apimodal" tabindex="-1" role="dialog">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                      <div class="modal-body">
+                        <canvas id="myChart" width="300" height="300"></canvas>
+                        <canvas id="stressChart" width="200" height="200"></canvas>
+                      </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </footer>
     </div>
   </div>
-  <div class="fixed-plugin">
-    <div class="dropdown show-dropdown">
-      <a href="#" data-toggle="dropdown">
-        <i class="fa fa-cog fa-2x"> </i>
-      </a>
-      <ul class="dropdown-menu">
-        <li class="header-title"> Sidebar Filters</li>
-        <li class="adjustments-line">
-          <a href="javascript:void(0)" class="switch-trigger active-color">
-            <div class="badge-colors ml-auto mr-auto">
-              <span class="badge filter badge-purple" data-color="purple"></span>
-              <span class="badge filter badge-azure" data-color="azure"></span>
-              <span class="badge filter badge-green" data-color="green"></span>
-              <span class="badge filter badge-warning" data-color="orange"></span>
-              <span class="badge filter badge-danger" data-color="danger"></span>
-              <span class="badge filter badge-rose active" data-color="rose"></span>
-            </div>
-            <div class="clearfix"></div>
-          </a>
-        </li>
-        <li class="header-title">Images</li>
-        <li class="active">
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-1.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-2.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-3.jpg" alt="">
-          </a>
-        </li>
-        <li>
-          <a class="img-holder switch-trigger" href="javascript:void(0)">
-            <img src="../assets/img/sidebar-4.jpg" alt="">
-          </a>
-        </li>
-        <li class="button-container">
-          <a href="https://www.creative-tim.com/product/material-dashboard" target="_blank" class="btn btn-primary btn-block">Free Download</a>
-        </li>
-        <!-- <li class="header-title">Want more components?</li>
-            <li class="button-container">
-                <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
-                  Get the pro version
-                </a>
-            </li> -->
-        <li class="button-container">
-          <a href="https://demos.creative-tim.com/material-dashboard/docs/2.1/getting-started/introduction.html" target="_blank" class="btn btn-default btn-block">
-            View Documentation
-          </a>
-        </li>
-        <li class="button-container github-star">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-        </li>
-        <li class="header-title">Thank you for 95 shares!</li>
-        <li class="button-container text-center">
-          <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-          <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-          <br>
-          <br>
-        </li>
-      </ul>
     </div>
   </div>
   <!--   Core JS Files   -->
-  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
@@ -677,6 +622,8 @@
   <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
@@ -847,6 +794,33 @@
         });
       });
     });
+
+    $.getJSON("employee.json", function(result){
+          content = '';
+          console.log(typeof(result));
+          console.log(result);
+          for (let i = 0; i < result.length ; i++) {
+            content+='<tr onclick="viewRow('+result[i].id+')"><td>'+result[i].id+'</td>';
+            content+='<td>'+result[i].name+'</td>';
+            content+='<td>'+result[i].age+'</td>';
+            content+='<td>'+result[i].gender+'</td>';
+            content+='<td>'+result[i].designation+'</td>';
+            content+='</tr>';
+          }
+          $('#employeedetails').append(content);    
+        });
+      });
+    });
+    function viewRow(id){
+          $.getJSON("employee.json", function(result){
+            for (let i = 0; i < result.length ; i++) {
+            if(id == result[i].id){
+              $('.modal-title').html(result[i].name);
+              $('#apimodal').modal('show');
+            }
+          }
+           });
+        };
   </script>
   <script>
     $(document).ready(function() {
@@ -854,6 +828,103 @@
       md.initDashboardPageCharts();
 
     });
+  </script>
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'Pulse Rate',
+            data: [],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    suggestedMax: 200
+                }
+            }]
+        }
+    }
+});
+
+  //stress chart
+  var ctx = document.getElementById('stressChart').getContext('2d');
+var stressChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Stress', 'Relaxed', 'Anxiety', 'Xyz'],
+        datasets: [{
+            label: '# of Votes',
+            data: [3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+  </script>
+  <script>
+     const socket = io('https://cardigo.eu-gb.cf.appdomain.cloud');
+      socket.on('connect', () => {
+        console.log(socket.id);
+        console.log(socket.connected);
+        //receive feedback
+      socket.on('receive_feedback', (data) => {
+      console.log(data);
+      console.log(data.feedbackSent.question_3)
+      });
+      });
+
+      //receive pulse data
+      socket.on('receive_pulse', (data) => {
+      console.log(data);
+      console.log(data.tracepulse.length);
+      var label = [];
+      var pulsedata =[];
+      for (let i= 0; i < data.tracepulse.length; i++) {
+        label.push(i.toString());
+      }
+      console.log(label);
+      pulsedata = data.tracepulse;
+      console.log(pulsedata);
+      console.log("inside add chart function");
+      myChart.data.labels = label;
+      myChart.data.datasets[0].data = pulsedata;
+      myChart.update();
+      });
+
+      
   </script>
 </body>
 
