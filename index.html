@@ -269,17 +269,16 @@
                         </div>
                       <div class="modal-body">
                         <div class="row">
-                          <div class="col-md-4" id="personalDetails">
-                          </div>
-                          <div class="col-md-8">
-                            <canvas id="myChart" width="300" height="300"></canvas>
+                          <div class="col-12" id="personalDetails">
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-6">
                             <canvas id="stressChart" width="200" height="200"></canvas>
                           </div>
-                          <div class="col-md-6"></div>
+                          <div class="col-md-6">
+                            <canvas id="myChart" width="300" height="300"></canvas>
+                          </div>
                         </div>
                       </div>
                     <div class="modal-footer">
@@ -528,7 +527,7 @@
           $.getJSON("employee.json", function(result){
             for (let i = 0; i < result.length ; i++) {
             if(id == result[i].id){
-              $('.modal-title').html(result[i].first_name);
+              $('.modal-title').html(result[i].employee_id);
               content+='<img src="'+result[i].avatar+'" width="60px" height="60px" style="border-radius:50%;">';
               content+='<small class="form-text text-muted">'+result[i].email+'</small>';
               content+='<p>'+result[i].first_name+'</p>';
