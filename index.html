@@ -504,6 +504,8 @@
           }, 1000);
 
         });
+
+        //create table 
     $.getJSON("employee.json", function(result){
           content = '';
           console.log(typeof(result));
@@ -519,13 +521,15 @@
         });
       });
     });
+
+    //modal call and adding modal data
     function viewRow(id){
           content = '';
           $.getJSON("employee.json", function(result){
             for (let i = 0; i < result.length ; i++) {
             if(id == result[i].id){
               $('.modal-title').html(result[i].first_name);
-              content+='<img src="'+result[i].avatar+'" width="30px" height="30px"';
+              content+='<img src="'+result[i].avatar+'" width="60px" height="60px" style="border-radius:50%;"';
               content+='<small class="form-text text-muted">'+result[i].email+'</small>';
               content+='<p>'+result[i].first_name+'</p>';
               $('#apimodal').modal('show');
