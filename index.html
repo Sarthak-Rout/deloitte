@@ -636,6 +636,14 @@ var stressChart = new Chart(ctx, {
 
       
   </script>
+
+  <script>
+    $.ajax({
+      url: "https://536b9159-b453-404d-b7d5-a9513293dc75-bluemix.cloudant.com/employee-details-cardigo/_all_docs?include_docs=true"
+    }).done(function(data) {
+      console.log(data);
+    });
+  </script>
 </body>
 
 </html>
