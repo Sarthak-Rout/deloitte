@@ -270,7 +270,7 @@
                         </div>
                       <div class="modal-body">
                         <div class="row">
-                          <div class="col-md-6">
+                          <div class="col-md-6" id="personalDetails">
                           </div>
                           <div class="col-md-6">
                             <canvas id="myChart" width="300" height="300"></canvas>
@@ -511,9 +511,8 @@
           console.log(result);
           for (let i = 0; i < result.length ; i++) {
             content+='<tr onclick="viewRow('+result[i].id+')"><td>'+result[i].id+'</td>';
-            content+='<td>'+result[i].name+'</td>';
-            content+='<td>'+result[i].age+'</td>';
-            content+='<td>'+result[i].gender+'</td>';
+            content+='<td>'+result[i].employee_id+'</td>';
+            content+='<td>'+result[i].first_name+'</td>';
             content+='<td>'+result[i].designation+'</td>';
             content+='</tr>';
           }
@@ -522,13 +521,18 @@
       });
     });
     function viewRow(id){
+          content = '';
           $.getJSON("employee.json", function(result){
             for (let i = 0; i < result.length ; i++) {
             if(id == result[i].id){
-              $('.modal-title').html(result[i].name);
+              $('.modal-title').html(result[i].first_name);
+              content+='<img src="'+result[i].avatar+'" width="30px" height="30px"';
+              content+='<small class="form-text text-muted">'+result[i].email+'</small>';
+              content+='<p>'+result[i].first_name+'</p>';
               $('#apimodal').modal('show');
             }
           }
+          $('#personalDetails').append(content);
            });
         };
   </script>
