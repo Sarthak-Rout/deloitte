@@ -622,7 +622,7 @@ var stressChart = new Chart(ctx, {
       socket.on('receive_feedback', (data) => {
       console.log(data);
       console.log(data.feedbackSent.question_3)
-      localStorage.SetItem('feedback',JSON.stringify(data));
+      localStorage.setItem('feedback',JSON.stringify(data));
       feedback=localStorage.getItem('feedback');
       });
       });
@@ -630,7 +630,7 @@ var stressChart = new Chart(ctx, {
       //receive pulse data
       socket.on('receive_pulse', (data) => {
       console.log(data);    
-      localStorage.SetItem('pulse',JSON.stringify(data));
+      localStorage.setItem('pulse',JSON.stringify(data));
       pulse=localStorage.getItem('pulse');
       console.log(data.tracepulse.length);
       var label = [];
