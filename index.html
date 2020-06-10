@@ -613,6 +613,7 @@ var stressChart = new Chart(ctx, {
 });
   </script>
   <script>
+    var feedback,pulse;
      const socket = io('https://cardigo.eu-gb.cf.appdomain.cloud');
       socket.on('connect', () => {
         console.log(socket.id);
@@ -621,12 +622,16 @@ var stressChart = new Chart(ctx, {
       socket.on('receive_feedback', (data) => {
       console.log(data);
       console.log(data.feedbackSent.question_3)
+      localstorage.SetItem('feedback',JSON.stringify(data));
+      feedback=localstorage.getItem('feedback');
       });
       });
 
       //receive pulse data
       socket.on('receive_pulse', (data) => {
-      console.log(data);
+      console.log(data);    
+      localstorage.SetItem('pulse',JSON.stringify(data));
+      pulse=localstorage.getItem('pulse');
       console.log(data.tracepulse.length);
       var label = [];
       var pulsedata =[];
